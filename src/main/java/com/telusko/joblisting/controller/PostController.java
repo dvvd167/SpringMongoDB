@@ -4,11 +4,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class HelloWorldController {
+public class PostController {
 
-    @GetMapping("/hello")
-    public String hello(Model model) {
-        model.addAttribute("message", "Hello, World!");
-        return "hello";
+    @GetMapping("/post")
+    public String showPost(Model model) {
+        model.addAttribute("post", "Hello, World! This is a post.");
+        return "post";
     }
 }
